@@ -12,19 +12,25 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #d2fff4;
+    background: #f7f7f7;
 }
 
 nav{
+    background-color: rgb(218, 123, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 500px;
     width: 100%;
     height: 100%;
+    padding-top: 15px;
+}
+h1{
+color: white;
 }
 
-.logo h1{
+h1 .logo{
+    color: white;
     width: 150px;
     height: 50px;
     list-style: none;
@@ -47,11 +53,11 @@ nav a{
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 700;
+    color: white;
 }
 
 .log{
-
-  border: solid 2px black;
+  border: solid 2px rgb(255, 255, 255);
   border-radius: 20px;
   padding: 2px 5px;
 } 
@@ -60,7 +66,7 @@ nav a :hover .log{
 }
 
 nav a:hover{
-    border-bottom: 2px solid hsl(0, 0%, 0%);
+    border-bottom: 2px solid hsl(0, 0%, 75%);
     transition: 1s;
 }
 
@@ -80,7 +86,7 @@ nav a:hover{
 .producto{
     text-align: center;
     background-color: white;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 .producto img{
     width: 250px;
@@ -91,12 +97,20 @@ nav a:hover{
     transition-duration: 3s;
     transform: scale(0.8);
 }
-.btn-add-cart{
+.producto p{
+    padding-bottom: 10px;
+}
+a #btn-add-cart{
+ margin-top: 5px;
+}
+#btn-add-cart{
+    margin-top: 10px;
+    text-decoration: none;
     border-style: hidden;
     padding: 7px;
-    background: rgb(71, 71, 71);
+    background: rgb(224, 108, 0);
     color: white;
-    border-radius: 15px;
+    border-radius: 12px;
     cursor: pointer;
 
 }
@@ -130,7 +144,7 @@ nav a:hover{
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: rgb(84, 118, 230);
+    background-color: rgb(192, 109, 0);
     color: aliceblue;
     border-radius: 15px;
     padding: 8px;
@@ -149,7 +163,11 @@ nav a:hover{
 .car{
     height: 50px;
 }
+
 table thead tr th{
     padding: 10px;
 
+}
+.imgCar{
+    width: 150px;
 }

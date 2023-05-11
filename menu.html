@@ -11,10 +11,7 @@
 
 <body>
 
-    <div class="french-fries">
-        <img src="" alt="">
-    </div>
-
+    
     <nav>
 
         
@@ -28,13 +25,13 @@
             <li class="log"><a href="#">Iniciar Sesion</a></li>
 
             <li class="submenu">
-                <img class="car" src="./img/carrito.png" id="img-carrito">
+                <img class="car" src="./img/carritoN.png" id="img-carrito">
                 <div id="carrito">
 
                     <table id="lista-carrito" class="u-full-width carComp">
                         <thead>
                             <tr>
-                                <th>        </th>
+                                <th>IMAGEN       </th>
                                 <th>Producto</th>
                                 <th>Precio</th>
                                 <th>Cantidad</th>
@@ -42,6 +39,9 @@
                             </tr>
                         </thead>
                         <tbody></tbody>
+                        <tr>
+                            <td class="total">Total: </td>
+                        </tr>
                     </table>
 
                     <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
@@ -57,31 +57,33 @@
     <br><br>
 
 
-    <section class="container-items">
+    <section id="lista-productos" class="container-items">
         <h3 class="tituloSec">HAMBURGUESAS</h3>
         <section class="menu hamb">
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="img/ham.png" alt="">
                 <div class="info-producto">
                     <h2>Clet's Burger</h2>
-                    <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <p class='precio'>$80</p>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="1" class="">Añadir al carrito</a>
                 </div>
             </div>
+
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="img/ham.png" alt="">
                 <div class="info-producto">
                     <h2>Jona's Burger</h2>
-                    <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <p class="precio">$150</p>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="2" class="">Añadir al carrito</a>
                 </div>
             </div>
+
             <div class="producto">
                 <img src="./img/ham.png" alt="">
                 <div class="info-producto">
                     <h2>Supreme Burger</h2>
-                    <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <p class="precio">$300</p>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="3" class="">Añadir al carrito</a>
                 </div>
             </div>
         </section>
@@ -94,7 +96,7 @@
                 <div class="info-producto">
                     <h2>Clet's Burger</h2>
                     <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="4" class="">Añadir al carrito</a>
                 </div>
             </div>
             <div class="producto">
@@ -102,7 +104,7 @@
                 <div class="info-producto">
                     <h2>Jona's Burger</h2>
                     <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="5" class="">Añadir al carrito</a>
                 </div>
             </div>
             <div class="producto">
@@ -110,7 +112,7 @@
                 <div class="info-producto">
                     <h2>Supreme Burger</h2>
                     <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="6" class="">Añadir al carrito</a>
                 </div>
             </div>
         </section>
@@ -123,7 +125,7 @@
                 <div class="info-producto">
                     <h2>Clet's Burger</h2>
                     <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="7" class="">Añadir al carrito</a>
                 </div>
             </div>
             <div class="producto">
@@ -131,7 +133,7 @@
                 <div class="info-producto">
                     <h2>Jona's Burger</h2>
                     <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="8" class="">Añadir al carrito</a>
                 </div>
             </div>
             <div class="producto">
@@ -139,7 +141,7 @@
                 <div class="info-producto">
                     <h2>Supreme Burger</h2>
                     <p class="precio">$80</p>
-                    <button class="btn-add-cart">Añadir al carrito</button>
+                    <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="9" class="">Añadir al carrito</a>
                 </div>
             </div>
         </section>
@@ -147,6 +149,9 @@
 
 
     </section>
+
+
+    <script src="./js/app01.js"></script>
 
 </body>
 
