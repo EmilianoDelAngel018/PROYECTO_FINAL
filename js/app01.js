@@ -85,11 +85,7 @@ function carritoHTML(){
         <td><a href="#" class="vacio borrar-producto" data-id="${producto.id}">🗑️</a></td>
         `
         contenedor.appendChild(row);
-        total=total + parseInt(producto.cantidad * producto.precio.slice(1));
-		
-        
-
-
+        total=total + parseInt(producto.cantidad * producto.precio);
     })
     
     Valortotal.innerHTML=`$ ${total}`
