@@ -2,7 +2,10 @@ const carrito = document.querySelector('#carrito');
 const listaProductos = document.querySelector('#lista-productos');
 const contenedor = document.querySelector('#lista-carrito tbody');
 const vaciarCarritobtn = document.querySelector('#vaciar-carrito');
+const Valortotal=document.querySelector('#total');
+/* const footer=document.querySelector('span #footer'); */
 let articulosCarrito = [];
+
 
 inicarEventos()
 function inicarEventos() {
@@ -16,14 +19,15 @@ function agregarProducto(e) {
     if (e.target.classList.contains('agregar-carrito')) {
         const producto = e.target.parentElement.parentElement;
         leerDatosProducto(producto)
-    }
+        Swal.fire(`PRODUCTO AGREGADO AL CARRITO EXITOSAMENTE`)
+    }  
 }
 
 function leerDatosProducto(producto) {
     const infoProducto = {
         imagen: producto.querySelector('img').src,
         nombre: producto.querySelector('h2').textContent,
-        precio: producto.querySelector('.precio').textContent,
+        precio: producto.querySelector('.precio span').textContent,
         id: producto.querySelector('a').getAttribute('data-id'),
         cantidad: 1
     }
@@ -54,6 +58,7 @@ function eliminarProducto(e){
         const productoID=e.target.getAttribute('data-id')
         articulosCarrito=articulosCarrito.filter(producto=>producto.id !==productoID)
         carritoHTML()
+        Swal.fire(`PRODUCTO ELIMINADO AL CARRITO EXITOSAMENTE `)
     }
 }
 
@@ -66,6 +71,7 @@ function vaciarCarrito(){
 
 function carritoHTML(){
     vaciarCarrito()
+    let total=0
 
     articulosCarrito.forEach(producto=>{
         const row =document.createElement('tr')
@@ -74,10 +80,18 @@ function carritoHTML(){
         <img class="imgCar" src="${producto.imagen}">
         </td>
         <td>${producto.nombre}</td>
-        <td>${producto.precio}</td>
+        <td>$${producto.precio}</td>
         <td>${producto.cantidad}</td>
         <td><a href="#" class="vacio borrar-producto" data-id="${producto.id}">🗑️</a></td>
         `
         contenedor.appendChild(row);
+        total=total + parseInt(producto.cantidad * producto.precio.slice(1));
+		
+        
+
+
     })
+    
+    Valortotal.innerHTML=`$ ${total}`
+    
 }

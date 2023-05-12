@@ -13,6 +13,7 @@ body{
     align-items: center;
     flex-direction: column;
     background: #f7f7f7;
+
 }
 
 nav{
@@ -56,11 +57,13 @@ nav a{
     color: white;
 }
 
-.log{
-  border: solid 2px rgb(255, 255, 255);
-  border-radius: 20px;
-  padding: 2px 5px;
+.log :hover{
+  transition-duration: 1.5s;
+  transform: scale(0.8);
 } 
+li img{
+    width: 50px;
+}
 nav a :hover .log{
   border-bottom: none;
 }
@@ -69,6 +72,8 @@ nav a:hover{
     border-bottom: 2px solid hsl(0, 0%, 75%);
     transition: 1s;
 }
+
+
 
 /*ESTILOS SECCION COMPRAS*/
 .container-items{
@@ -85,8 +90,9 @@ nav a:hover{
 
 .producto{
     text-align: center;
-    background-color: white;
+    background-color:  #ffde59;
     padding: 20px 0;
+    border-radius: 10px;
 }
 .producto img{
     width: 250px;
@@ -171,3 +177,6 @@ table thead tr th{
 .imgCar{
     width: 150px;
 }
+
+
+/*tootl tip*/

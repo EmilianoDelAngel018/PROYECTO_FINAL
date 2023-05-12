@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú - Mr.Burguer's</title>
     <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/dkMode.css">
 </head>
 
 <body>
@@ -17,13 +18,14 @@
         
 
         <ul>
-            <li><h1 class="logo">Mr. Burger's</h1></li>
+            
+            <li><h1 class="logo">🍔Mr. Burger's</h1></li>
             <li><a href="./inicio.html">Inicio</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Sugerencias</a></li>
-            <li class="log"><a href="#">Iniciar Sesion</a></li>
-
+            <li><a href="menu.html">Menú</a></li>
+        
+            
+            <li class="log"><a href="final-form.html"><img src="./img/user.png" alt=""></a></li>
+            
             <li class="submenu">
                 <img class="car" src="./img/carritoN.png" id="img-carrito">
                 <div id="carrito">
@@ -31,7 +33,7 @@
                     <table id="lista-carrito" class="u-full-width carComp">
                         <thead>
                             <tr>
-                                <th>IMAGEN       </th>
+                                <th>IMAGEN</th>
                                 <th>Producto</th>
                                 <th>Precio</th>
                                 <th>Cantidad</th>
@@ -40,49 +42,53 @@
                         </thead>
                         <tbody></tbody>
                         <tr>
-                            <td class="total">Total: </td>
+                            <td class="total">Total: <span id="total"></span></td>
                         </tr>
                     </table>
 
                     <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
                 </div>
             </li>
+
+            <button class="darkModeSwitch ms-2" id="switch">
+                <span><i class=" fa-sun"></i></span>
+                <span><i class=" fa-moon"></i></span> 
+                </button>
         </ul>
 
     </nav>
     <br><br>
 
 
-    <h2>NUESTRO MENÚ</h2>
+    <h3 class="tituloSec">NUESTRO MENÚ</h3>
     <br><br>
-
 
     <section id="lista-productos" class="container-items">
         <h3 class="tituloSec">HAMBURGUESAS</h3>
         <section class="menu hamb">
             <div class="producto">
-                <img src="img/ham.png" alt="">
+                <img src="img/ham1.png" alt="">
                 <div class="info-producto">
                     <h2>Clet's Burger</h2>
-                    <p class='precio'>$80</p>
+                    <p class='precio'>$<span>120</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="1" class="">Añadir al carrito</a>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="img/ham.png" alt="">
+                <img src="img/ham2.png" alt="">
                 <div class="info-producto">
                     <h2>Jona's Burger</h2>
-                    <p class="precio">$150</p>
+                    <p class="precio">$<span> 120</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="2" class="">Añadir al carrito</a>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="./img/ham3.png" alt="">
                 <div class="info-producto">
-                    <h2>Supreme Burger</h2>
-                    <p class="precio">$300</p>
+                    <h2>BELLA BURGER</h2>
+                    <p class="precio">$<span> 150</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="3" class="">Añadir al carrito</a>
                 </div>
             </div>
@@ -92,26 +98,26 @@
         <br>
         <section class="menu hamb">
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="./img/sand1.png" alt="">
                 <div class="info-producto">
-                    <h2>Clet's Burger</h2>
-                    <p class="precio">$80</p>
+                    <h2>EVA-01</h2>
+                    <p class="precio">$<span> 149</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="4" class="">Añadir al carrito</a>
                 </div>
             </div>
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="./img/sand2.png" alt="">
                 <div class="info-producto">
-                    <h2>Jona's Burger</h2>
-                    <p class="precio">$80</p>
+                    <h2>KATTY SANDWICH</h2>
+                    <p class="precio">$<span> 99</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="5" class="">Añadir al carrito</a>
                 </div>
             </div>
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="./img/sand3.png" alt="">
                 <div class="info-producto">
-                    <h2>Supreme Burger</h2>
-                    <p class="precio">$80</p>
+                    <h2>NL SANDWICH</h2>
+                    <p class="precio">$<span> 110</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="6" class="">Añadir al carrito</a>
                 </div>
             </div>
@@ -121,26 +127,26 @@
         <br>
         <section class="menu hamb">
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="./img/comp1.png" alt="">
                 <div class="info-producto">
-                    <h2>Clet's Burger</h2>
-                    <p class="precio">$80</p>
+                    <h2>CRUJI-PAPAS</h2>
+                    <p class="precio">$<span> 79</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="7" class="">Añadir al carrito</a>
                 </div>
             </div>
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="./img/comp2.png" alt="">
                 <div class="info-producto">
-                    <h2>Jona's Burger</h2>
-                    <p class="precio">$80</p>
+                    <h2>YERI-PAPAS</h2>
+                    <p class="precio">$<span> 69</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="8" class="">Añadir al carrito</a>
                 </div>
             </div>
             <div class="producto">
-                <img src="./img/ham.png" alt="">
+                <img src="./img/comp1.png" alt="">
                 <div class="info-producto">
-                    <h2>Supreme Burger</h2>
-                    <p class="precio">$80</p>
+                    <h2>KENY- PAPAS</h2>
+                    <p class="precio">$<span> 59</span></p>
                     <a href="#" id="btn-add-cart" class="agregar-carrito " data-id="9" class="">Añadir al carrito</a>
                 </div>
             </div>
@@ -152,6 +158,9 @@
 
 
     <script src="./js/app01.js"></script>
+    <script src="./js/dkMode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </body>
 
